@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelledger"
+version = "0.1.0"
+description = "Dependabot for AI models"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0,<7"]
+
+[project.scripts]
+modelledger = "modelledger.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["modelledger*"]
+
+[tool.setuptools.package-data]
+modelledger = ["data/*.yaml"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "setuptools>=77", "wheel>=0.45"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,38 @@
+schema_version: 1
+models:
+  # All records in this MVP registry are synthetic demo data, not real lifecycle facts.
+  - model_id: demo-active-v1
+    aliases:
+      - demo-active
+    provider: ModelLedger Demo Provider
+    status: active
+    deprecation_date: null
+    shutdown_date: null
+    recommended_replacement: null
+    source_url: https://example.com/modelledger/demo-data
+    last_verified_date: "2026-07-19"
+    demo_data: true
+
+  - model_id: demo-deprecated-v1
+    aliases:
+      - demo-deprecated
+    provider: ModelLedger Demo Provider
+    status: deprecated
+    deprecation_date: "2026-06-01"
+    shutdown_date: "2026-08-15"
+    recommended_replacement: demo-active-v1
+    source_url: https://example.com/modelledger/demo-data
+    last_verified_date: "2026-07-19"
+    demo_data: true
+
+  - model_id: demo-retired-v1
+    aliases:
+      - demo-retired
+    provider: ModelLedger Demo Provider
+    status: retired
+    deprecation_date: "2025-10-01"
+    shutdown_date: "2026-01-01"
+    recommended_replacement: demo-active-v1
+    source_url: https://example.com/modelledger/demo-data
+    last_verified_date: "2026-07-19"
+    demo_data: true
