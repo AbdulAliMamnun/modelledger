@@ -21,6 +21,7 @@ modelledger = ["data/*.yaml"]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10", "setuptools>=77", "wheel>=0.45"]
+demo = ["streamlit"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
